@@ -16,8 +16,7 @@ interface InputProps {
   errors: FieldErrors
   disabled?: boolean;
 }
-//tailwindcss/forms package has been used
-//form input does not exists in traditional css for that we need to use it package
+
 const Input: React.FC<InputProps> = ({
   label,
   id,
@@ -49,7 +48,7 @@ const Input: React.FC<InputProps> = ({
           disabled={disabled}
           {...register(id, { required })}
           className={clsx(`
-            form-input 
+            form-input
             block 
             w-full 
             rounded-md 
@@ -72,9 +71,7 @@ const Input: React.FC<InputProps> = ({
         />
       </div>
     </div>
-    
    );
-   {/*clsx is a libraray which allows us to use classes dynamically*/}
 }
  
 export default Input;

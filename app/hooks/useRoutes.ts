@@ -6,13 +6,9 @@ import { signOut } from "next-auth/react";
 import useConversation from "./useConversation";
 
 const useRoutes = () => {
-  // Get the current pathname using the usePathname hook
   const pathname = usePathname();
-
-  // Get the conversationId from the useConversation hook
   const { conversationId } = useConversation();
 
-  // Define an array of route objects using useMemo for memoization
   const routes = useMemo(() => [
     { 
       label: 'Chat', 
@@ -34,9 +30,7 @@ const useRoutes = () => {
     }
   ], [pathname, conversationId]);
 
-  // Return the memoized array of routes
   return routes;
 };
 
-// Export the custom hook for use in other components
 export default useRoutes;

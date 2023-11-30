@@ -9,8 +9,9 @@ import {
   useForm 
 } from 'react-hook-form';
 import { User } from '@prisma/client';
-import Select from '../inputs/Select';
+
 import Input from "../inputs/Input";
+import Select from '../inputs/Select';
 import Modal from './Modal';
 import Button from '../Button';
 import { toast } from 'react-hot-toast';

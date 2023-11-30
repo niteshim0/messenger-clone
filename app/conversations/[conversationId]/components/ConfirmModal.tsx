@@ -14,7 +14,7 @@ interface ConfirmModalProps {
   isOpen?: boolean;
   onClose: () => void;
 }
-//something wrong with this and chatId body
+
 const ConfirmModal: React.FC<ConfirmModalProps> = ({ 
   isOpen, 
   onClose 

@@ -3,13 +3,13 @@
 import { useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { Conversation, Message, User } from "@prisma/client";
-import {format} from "date-fns";
+import { format } from "date-fns";
 import { useSession } from "next-auth/react";
-import AvatarGroup from "@/app/components/AvatarGroup";
 import clsx from "clsx";
 
 import Avatar from "@/app/components/Avatar";
 import useOtherUser from "@/app/hooks/useOtherUser";
+import AvatarGroup from "@/app/components/AvatarGroup";
 import { FullConversationType } from "@/app/types";
 
 interface ConversationBoxProps {
@@ -83,7 +83,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
         selected ? 'bg-neutral-100' : 'bg-white'
       )}
     >
-       {data.isGroup ? (
+      {data.isGroup ? (
         <AvatarGroup users={data.users} />
       ) : (
         <Avatar user={otherUser} />

@@ -1,10 +1,7 @@
-// Importing the Image component from Next.js
 import Image from "next/image";
 import AuthForm from "./components/AuthForm";
 
-// Defining a functional component named Auth
 const Auth = () => {
-  // The component returns JSX, which represents the structure of the UI
   return (
     <div 
       className="
@@ -18,9 +15,7 @@ const Auth = () => {
         bg-gray-100
       "
     >
-      {/* Container for the logo and heading */}
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        {/* Next.js Image component for displaying the logo */}
         <Image
           height="48"
           width="48"
@@ -28,7 +23,6 @@ const Auth = () => {
           src="/images/logo.png"
           alt="Logo"
         />
-        {/* Heading */}
         <h2 
           className="
             mt-6 
@@ -38,14 +32,13 @@ const Auth = () => {
             tracking-tight 
             text-gray-900
           "
-        >
-          Sign in to your account
+          >
+            Sign in to your account
         </h2>
-      </div>  
-      <AuthForm/> 
-    </div>
-  );
+      </div>
+      <AuthForm />      
+  </div>
+  )
 }
 
-// Exporting the Auth component to be used in other parts of the application
 export default Auth;
